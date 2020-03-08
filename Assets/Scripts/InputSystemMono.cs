@@ -17,7 +17,7 @@ public class InputSystemMono : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //m_spawner.SpawnCubes();
+            m_spawner.SpawnCubes();
         }
     }
     

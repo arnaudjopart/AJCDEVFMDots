@@ -32,13 +32,13 @@ public class JumpingCube : MonoBehaviour
         }
 
         m_currentSpeed -= m_gravity * Time.deltaTime;
-        transform.position+=new Vector3(0,m_currentSpeed,0);
+        transform.position+=new Vector3(0,m_currentSpeed*Time.deltaTime,0);
     }
 
     public void SetParamRandom()
     {
-        m_gravity = Random.value;
-        m_jumpSpeed = Random.value*.8f;
+        m_gravity = Random.Range(2,10);
+        m_jumpSpeed = Random.Range(30,50);
         var materialIndex = Random.Range(0, m_materials.Length);
         m_meshRenderer.material = m_materials[materialIndex];
     }
